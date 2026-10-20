@@ -29,6 +29,6 @@ int main(){
 		i = i+1;
 	}
 	str[i] = '\0';
-	printf("%s\n",s);
+	printf("%s\n",str);
 return 0;
 }
