@@ -1,9 +1,11 @@
 //Лубенец Илья 201-ИС-25 17.10.26
 #include <stdio.h>
 #include <locale.h>
+#define AR_LEN 100
 int main(){
 	int n;
 	char c1,c2;
+	char str[AR_LEN];
 	//Сканируем число N
 	scanf("%d",&n);
 	//Проверяем его на четность, если четное то сканируем символы, если нет то заканчиваем программу
@@ -18,8 +20,15 @@ int main(){
 	int i=0;
 	//Печатаем строку N-длинны чередуя символы c1,c2
 	while(i<n){
-		printf("%c ",c1);
-		printf("%c ",c2);
+		if(i%2==0){
+			str[i] = c1;
+		}
+		else{
+			str[i] = c2;
+		}
 		i = i+1;
 	}
+	str[i] = '\0';
+	printf("%s\n",s);
+return 0;
 }
