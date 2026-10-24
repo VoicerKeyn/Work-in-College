@@ -1,1 +1,23 @@
+/*Лубенец Илья 201-ИС-25  24.10.2026
+Matrix2 Абрамян*/
+#include <stdio.h>
+#define MAXROWS 100
+#define MAXCOLS 100
+int main() {
+	int mat[MAXROWS][MAXCOLS];
+	int rows, cols;
+	scanf("%d %d", &rows, &cols);
+	int r, c;
+	/* Чтение */
+	for (r = 0; r < rows; ++r)
+		for (c = 0; c < cols; ++c)
+			mat[r][c] = 5 * c;
+	/* Печать */
+	for (r = 0; r < rows; ++r) {
+		for (c = 0; c < cols; ++c)
+			printf("%d%c", mat[r][c], c < cols-1 ? '_' : '\n');
+	}
+	
+	return 0;
+}
 
